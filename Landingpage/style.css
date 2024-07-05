@@ -3,9 +3,6 @@
     padding: 0;
     font-family: "Titillium Web", sans-serif;
 }
-body{
-    background-color: #dff5ff;
-}
 a{
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -51,10 +48,34 @@ li{
 .header-box li:hover{
     background-color: lightcyan;
 }
-@media(max-width: 745px){
+.checkbox, .fa-bars{
+    display: none;
+}
+
+@media(max-width: 833px){
     .header-box ul{
-        display: none;
+        position: absolute;
+        display: inline-block;
+        top: 5rem;
+        background-color: rgb(44, 0, 53);
+        padding: 1rem 0.5rem;
+        border-radius: 15px;
+        right: -300px;
     }
+    .header-box li{
+        margin: 0.4rem 0;
+    }
+    .header-box a{
+        color: white;
+    }
+    .fa-bars{
+        display: inline;
+        margin-right: 1rem;
+        font-size: 1.5rem;
+    }
+}
+.checkbox:checked ~.menu-bar{
+    right: 0;
 }
 .heroSection{
     display: flex;
